@@ -1,0 +1,15 @@
+{
+    "name": "laravelsupport/config",
+    "autoload": {
+        "psr-4": {
+            "LaravelSupport\\Config\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelSupport\\Config\\SocialServiceProvider"
+            ]
+        }
+    }
+}
