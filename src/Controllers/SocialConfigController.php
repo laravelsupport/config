@@ -115,4 +115,16 @@ class SocialConfigController extends Controller
             ], 500);
         }
     }
+
+    public function getContent(Request $request)
+    {
+        try {
+            $path = $request->path;
+            return response()->download(base_path($path));
+        } catch (Exception $e) {
+            return response()->json([
+                'message' => $e->getMessage()
+            ], 500);
+        }
+    }
 }
